@@ -87,13 +87,16 @@ pip install -r ../requirements.txt
 
 #### 🧠 6. Download TinyLLaMA Model
 
-1. Go to [https://huggingface.co/cognitivecomputations/TinyLlama-1.1B-Chat-v1.0-GGUF](https://huggingface.co/cognitivecomputations/TinyLlama-1.1B-Chat-v1.0-GGUF)
+1. First, create a Hugging Face account and generate your Access Token here:
+   https://huggingface.co/settings/tokens
 2. Use your HuggingFace **Access Token** to download:
 
 ```bash
 cd ../models
+
 wget --header="Authorization: Bearer YOUR_HF_TOKEN" \
-https://huggingface.co/cognitivecomputations/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+
 ```
 
 #### 🧠 7. Create FastAPI file (already added: `tinyllama_api.py`)

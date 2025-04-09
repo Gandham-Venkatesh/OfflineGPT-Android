@@ -33,6 +33,27 @@ TinyLLaMA_OfflineGPT/
 ```
 
 ---
+## 📸 Screenshots
+
+Here are a few glimpses of the project in action:
+
+### 🔹 Android App UI
+
+![App UI Screenshot](./assets/ui-screenshot.jpeg)
+
+### 🔹 Terminal Setup
+
+![Termux Server Screenshot](./assets/terminal-screenshot.jpeg)
+
+---
+
+## 🎥 Demo Video
+
+<video src="./assets/demo-video.mp4" controls width="100%" height="auto">
+  Your browser does not support the video tag.
+</video>
+
+---
 
 ## 🔧 Installation Steps
 

@@ -33,19 +33,6 @@ TinyLLaMA_OfflineGPT/
 ```
 
 ---
-## 📸 Screenshots
-
-Here are a few glimpses of the project in action:
-
-### 🔹 Android App UI
-
-![App UI Screenshot](./assets/ui-screenshot.jpeg)
-
-### 🔹 Terminal Setup
-
-![Termux Server Screenshot](./assets/terminal-screenshot.jpeg)
-
----
 
 ## 🔧 Installation Steps
 
@@ -139,6 +126,20 @@ Or just use:
 - Response appears in the response tab.
 
 ---
+## 📸 Screenshots
+
+Here are a few glimpses of the project in action:
+
+### 🔹 Android App UI
+
+![App UI Screenshot](./assets/ui-screenshot.jpeg)
+
+### 🔹 Terminal Setup
+
+![Termux Server Screenshot](./assets/terminal-screenshot.jpeg)
+
+---
+
 
 ## 📌 Final Notes
 

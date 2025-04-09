@@ -162,7 +162,13 @@ Open to improvements, PRs, or even internship tasks!
 
 ---
 
-Made with ❤️ by Gandham Venkatesh
+## 👨‍💻 Author
+
+Made with ❤️ by [Gandham Venkatesh](https://github.com/gandham-venkatesh)
+
+If you like this project, give it a ⭐ and consider following me on GitHub!
+
+---
 
 
 

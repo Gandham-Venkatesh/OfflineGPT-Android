@@ -47,14 +47,6 @@ Here are a few glimpses of the project in action:
 
 ---
 
-## 🎥 Demo Video
-
-<video src="./assets/demo-video.mp4" controls width="100%" height="auto">
-  Your browser does not support the video tag.
-</video>
-
----
-
 ## 🔧 Installation Steps
 
 ### 🔹 FRONTEND (Android App)

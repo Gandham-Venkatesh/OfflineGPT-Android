@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Offline GPT</string>
+    <string name="title_bar">TinyLLaMA</string>
+    <string name="enter_prompt">Enter your prompt here</string>
+    <string name="response_100">100 Tokens</string>
+    <string name="response_300">300 Tokens</string>
+    <string name="response_800">800 Tokens</string>
+    <string name="submit">Submit</string>
+    <string name="response_placeholder">Response will appear here..</string>
+</resources>

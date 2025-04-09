@@ -1,0 +1,97 @@
+============================
+🔥 OFFLINE GPT - TINYLLAMA API BACKEND SETUP (TERMUX)
+============================
+
+📍 Prerequisites:
+- Android phone
+- Termux app installed
+
+----------------------------
+1️⃣ INSTALL PYTHON & UBUNTU
+----------------------------
+
+# Update and install Python
+pkg update && pkg upgrade
+pkg install python
+
+# Install proot-distro
+pkg install proot-distro
+
+# Install Ubuntu
+proot-distro install ubuntu
+
+# Enter Ubuntu
+proot-distro login ubuntu
+
+----------------------------
+2️⃣ INSTALL GIT & CLONE REPO
+----------------------------
+
+# Inside Ubuntu
+apt update && apt upgrade
+apt install git
+
+# Clone llama.cpp repo
+git clone https://github.com/ggerganov/llama.cpp.git
+cd llama.cpp
+
+# Build llama-cli
+make -j
+
+----------------------------
+3️⃣ DOWNLOAD TINYLLAMA MODEL
+----------------------------
+
+# Go to: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
+# Login and go to: https://huggingface.co/settings/tokens
+# Copy your access token
+
+# Use wget or curl to download the model
+# (Example: Using curl)
+mkdir models
+cd models
+curl -L -o tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf -H "Authorization: Bearer YOUR_HF_TOKEN" https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+
+# Move model into llama.cpp/models if needed
+mv tinyllama*.gguf ../
+
+----------------------------
+4️⃣ SETUP PYTHON ENVIRONMENT
+----------------------------
+
+# Go back to your main folder
+cd ~
+
+# Install Python & pip in Ubuntu
+apt install python3 python3-pip
+
+# Install virtualenv
+pip3 install virtualenv
+
+# Create and activate virtual environment
+virtualenv venv
+source venv/bin/activate
+
+# Install FastAPI & Uvicorn
+pip install -r requirements.txt
+
+----------------------------
+5️⃣ RUN THE API SERVER
+----------------------------
+
+# Run the FastAPI backend server
+uvicorn tinyllama_api:app --host 0.0.0.0 --port 8000
+
+# Server will now be available on:
+# http://localhost:8000/
+
+----------------------------
+🧠 NOTE:
+----------------------------
+
+- Make sure model path in tinyllama_api.py is correct (default: ./llama.cpp/models/)
+- Your Android app sends POST/GET requests to Termux server at localhost
+
+----------------------------
+🎉 THAT'S IT! YOU'RE DONE!
+----------------------------

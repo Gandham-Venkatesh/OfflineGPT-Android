@@ -1,0 +1,136 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:title="@string/title_bar"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Main content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Prompt TextArea -->
+            <EditText
+                android:id="@+id/editTextPrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your prompt here"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:gravity="top|start"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="30dp"
+                android:focusableInTouchMode="true" />
+
+
+            <!-- Token Options -->
+            <RadioGroup
+                android:id="@+id/radioGroupTokens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/radio100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_100"
+                    android:minHeight="48dp"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radio300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:padding="8dp"
+                    android:text="@string/response_300" />
+
+                <RadioButton
+                    android:id="@+id/radio800"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_800"
+                    android:minHeight="48dp"
+                    android:padding="8dp" />
+            </RadioGroup>
+
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Loading Spinner -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                />
+
+
+
+
+
+            <!-- Timer TextView -->
+            <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Timer: 00s"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+
+            <!-- Response Text -->
+            <TextView
+                android:id="@+id/textViewResponse"
+                android:layout_width="match_parent"
+                android:layout_height="198dp"
+                android:layout_marginTop="24dp"
+                android:maxLines="10"
+                android:minLines="4"
+                android:overScrollMode="always"
+                android:padding="12dp"
+                android:scrollbars="vertical"
+                android:text="@string/response_placeholder"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
